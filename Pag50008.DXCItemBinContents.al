@@ -109,6 +109,7 @@ page 50008 "DXCItemBinContents"
                                 ESM='Especifica la cantidad de unidades del producto, en la unidad de medida base, que se almacena en la ubicación.',
                                 FRC='Indique le nombre d''unités de mesure de l''article stockées dans la zone, en unités de mesure de base.',
                                 ENC='Specifies how many units of the item, in the base unit of measure, are stored in the bin.';
+                    Visible = false;
                 }
                 field("Bin Type Code";"Bin Type Code")
                 {
@@ -236,7 +237,8 @@ page 50008 "DXCItemBinContents"
                 if Item.Inventory <> 0 then begin
                   Rec."Location Code" := Location.Code;
                   Rec."Item No." := Item."No.";
-                  Rec."DXC Quantity" := Item.Inventory;
+                  Rec."DXC Quantity" := Item.Inventory;  
+                  Rec."Unit of Measure Code" := Item."Base Unit of Measure";                
                   if INSERT then;
                 end;
               until Item.NEXT = 0;

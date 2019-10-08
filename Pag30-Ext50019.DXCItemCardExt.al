@@ -17,7 +17,7 @@ pageextension 50019 "DXCItemCardExt" extends "Item Card" //30
                             FRC='C&ontenu de la zone',
                             ENC='&Creaform Bin Contents';
                 Image = BinContent;
-                RunObject = Page "Item Bin Contents";
+                RunObject = Page "DXCItemBinContents";
                 RunPageLink = "Item No."=FIELD("No.");
                 RunPageView = SORTING("Item No.");
                 ToolTipML = ENU='View the quantities of the item in each bin where it exists. You can see all the important parameters relating to bin content, and you can modify certain bin content parameters in this window.',
